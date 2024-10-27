@@ -1,35 +1,35 @@
-# Tonkeeper Wallet API (DRAFT)
+# The Tonkeeper Wallet API (DRAFT)
 
 ⚠️ This documentation is work-in-progress. Some features are not yet implemented.
 
-* [Definitions](#definitions)
-* [Payment URLs](#payment-urls)
-* [Authentication](#authentication-methods)
-* [Transaction Request](#transaction-request)
-* [Basic transfers](#basic-transfers)
-  * [Payment](#unauthenticated-transfers)
-  * [Donation](#unauthenticated-donations)
-  * [Deploy](#unauthenticated-transfers)
-  * [SignRawPayload](#unauthenticated-transfers)
-* [Subscriptions](#subscriptions)
+* [جزئیات](#)
+* [پرداخت URLها](#پول)
+* [خودنمایی](#)
+* [درخواست معاملات](#تراک-)
+* [نقل های پایه](#تحول)
+  * [پرداخت](#انتقال های غیر غیر غیر قابل قبول)
+  * [Donation](#)
+  * [Deploy](#انتقال های غیر غیر غیر قابل قبول)
+  * [سین راوپی بار](#انتقال های غیر غیر غیر قابل قبول)
+* [پیش نویس](#)
 
 
-## Definitions
+## جزئیات
 
-#### Authentication
+#### خودنمایی
 
 Protocol for identifying the origin of the request (e.g. recipient of funds)
 with some root of trust. The trust could be linked to the Certificate Authority certificates (Web PKI) embedded in the OS, to a custom record on Tonkeeper backend, or provided implicitly for the embedded services.
 
-#### Authenticated object
+#### شی که
 
-The object’s origin has a verified chain of trust.
+منشی شی یک زنجیره اطمینان تأیید شده دارد.
 
-#### Unauthenticated object
+#### شی بی هویت
 
-The object’s origin is unknown and must be verified by the user through some other means unavailable to the wallet application.
+منشی شی مشخص نیست و باید توسط کاربر از طریق برخی دیگر در دسترس بودن برای استفاده از کیف پول مورد تأیید قرار گیرد.
 
-#### Unsigned object
+#### شی که
 
 The object does not have an explicit cryptographic signature that helps authenticating it directly.
 But it may still be authenticated via other means (e.g. over TLS connection).
